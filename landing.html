@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .encabezado {
+            text-align: center;
+            background-color: #a4dbe2;
+            color: rgba(23, 51, 58, 0.993);
+            padding: 40px 20px;
+        }
+
+        .encabezado h1 {
+            font-size: 5vw;
+            margin: 0;
+        }
+
+        .encabezado h2 {
+            color: rgb(8, 8, 8);
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        .contenido {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        img {
+            margin-top: 10px;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .formulario {
+            background-color: #f5f5f5;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            min-width: 250px;
+        }
+
+        .formulario button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3a49ac;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .parrafo-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 40px;
+            padding: 40px;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .parrafo {
+            flex: 1;
+            min-width: 250px;
+            max-width: 500px;
+            min-height: 190px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+        }
+        
+
+        .beneficios-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .beneficio {
+            flex: 1;
+            min-width: 200px;
+            max-width: 400px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .beneficio p {
+            font-size: 0.9em;
+            text-align: justify;
+        }
+
+        .estrella {
+            font-size: 24px;
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        .beneficio h4 {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .testimonios-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .testimonio {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonio p {
+            font-size: 0.9em;
+            text-align: justify;
+        }
+
+        .testimonio h4 {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .icono-testimonio {
+            font-size: 24px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.8em;
+            color: #333;
+            position: relative;
+        }
+
+        .titulo-seccion::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #3a49ac;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+        .banner {
+            background-color: #3a49ac;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 40px;
+        }
+            .banner h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+            .banner p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .boton-cta {
+            background-color: #ffd700;
+            color: #333;
+            padding: 12px 25px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton-cta:hover {
+            background-color:#a4dbe2;
+        }
+        .titulo-parrafo {
+            font-size: 1.2em;
+            color: #1a1a1a;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            font-family: inherit;
+}
+    </style>
+</head>
+
+<body>
+    <div class="encabezado">
+        <h1>EduLend</h1>
+        <h2>¡Un espacio para aprender, crecer y compartir conocimiento!</h2>
+    </div>
+
+    <div class="contenido">
+        <img src="picking-a-book-from-a-computer-screen-online-book-store-free-vector.jpg" alt="computador y libros">
+        <div class="formulario">
+            <h3>Inscríbete</h3>
+            <form action="">
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellidos" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="parrafo-container">
+        <div class="parrafo">
+            <p>
+                <strong class="titulo-parrafo">¿Qué es EduLend?</strong><br><br>
+                EduLend es un sistema para gestionar préstamos y llevar un control de computadores y libros educativos, asegurando un uso eficiente en el entorno académico.
+            </p>
+        </div>
+        
+        <div class="parrafo">
+            <p>
+                <strong class="titulo-parrafo">Objetivo:</strong><br><br>
+                Desarrollar e implementar en la Universidad CESDE un sistema integral para la gestión de préstamos de computadores y material bibliográfico, con el fin de optimizar el acceso, uso y control de los recursos académicos, fortaleciendo así los procesos formativos de los estudiantes y la eficiencia administrativa de la institución.
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="titulo-seccion">Beneficios</div>
+    <div class="beneficios-container">
+        <div class="beneficio">
+            <div class="estrella">&#9733;</div>
+            <h4>Acceso Rápido y Eficiente a Recursos Académicos</h4>
+            <p>EduLend permite a estudiantes y personal académico acceder de manera ágil y sencilla a computadores y libros educativos. Con este sistema, se optimiza el tiempo de uso y se evita el desorden administrativo, garantizando que todos los usuarios tengan lo que necesitan de manera eficiente.</p>
+        </div>
+        <div class="beneficio">
+            <div class="estrella">&#9733;</div>
+            <h4>Mejora en la Gestión y Control de Préstamos</h4>
+            <p>La plataforma facilita el seguimiento de préstamos y devoluciones de materiales educativos, asegurando un control completo sobre los recursos. Esto reduce las pérdidas y mejora la disponibilidad de materiales, lo que beneficia tanto a los estudiantes como a la institución.</p>
+        </div>
+        <div class="beneficio">
+            <div class="estrella">&#9733;</div>
+            <h4>Fomento de la Responsabilidad y el Aprendizaje Colaborativo</h4>
+            <p>EduLend fomenta un ambiente de aprendizaje responsable y colaborativo. Al permitir un acceso organizado a recursos educativos, se promueve el uso compartido de materiales y la cooperación entre estudiantes, enriqueciendo la experiencia educativa.</p>
+        </div>
+    </div>
+
+    <div class="titulo-seccion">Testimonios</div>
+    <div class="testimonios-container">
+        <div class="testimonio">
+            <div class="icono-testimonio">&#10077;</div>
+            <h4>María González - Estudiante</h4>
+            <p>EduLend ha sido una herramienta clave en mi vida universitaria. Acceder a libros y equipos nunca había sido tan fácil. Me encanta su rapidez y organización.</p>
+        </div>
+        <div class="testimonio">
+            <div class="icono-testimonio">&#10077;</div>
+            <h4>Luis Pérez - Coordinador Académico</h4>
+            <p>Gracias a EduLend hemos logrado optimizar la entrega y control de los recursos institucionales. Es una solución muy efectiva y fácil de implementar.</p>
+        </div>
+        <div class="testimonio">
+            <div class="icono-testimonio">&#10077;</div>
+            <h4>Dulce Mejía - Docente</h4>
+            <p>Lo que más valoro de EduLend es su sencillez. Mis estudiantes pueden acceder a lo que necesitan sin complicaciones, y eso mejora su experiencia académica.</p>
+        </div>
+    </div>
+    <div class="banner">
+        <h2>¿Listo para optimizar el acceso a tus recursos académicos?</h2>
+        <p>Únete a EduLend y descubre una forma más eficiente de estudiar, colaborar y avanzar.</p>
+        <a href="#formulario" class="boton-cta">¡Visitanos ahora!</a>
+    </div>
+    <div class="formulario" id="formulario"></div>
+</body>
+</html>
