@@ -20,11 +20,6 @@
       background-repeat: no-repeat;
     }
 
-    .logo-header {
-      background-color: rgba(255, 255, 255, 0.6);
-      padding: 10px 20px;
-    }
-
     .logo-enlace {
       font-size: 1.8em;
       font-weight: bold;
@@ -38,7 +33,7 @@
     }
 
     .overlay {
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.231);
       min-height: 100vh;
       padding-bottom: 40px;
     }
@@ -46,36 +41,13 @@
     .encabezado {
       text-align: center;
       padding: 40px 20px 10px;
-      color: rgba(23, 51, 58, 0.993);
-    }
-
-    .encabezado h1 {
-      font-size: 5vw;
-      color: black;
+      color: rgba(0, 0, 0, 0.993);
     }
 
     .encabezado h2 {
-      color: rgb(28, 80, 71);
+      color: rgb(0, 0, 0);
       margin-top: 10px;
       font-weight: normal;
-    }
-
-    .busqueda {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-      gap: 15px;
-      padding: 20px;
-    }
-
-    .busqueda-input {
-      width: 90%;
-      max-width: 500px;
-      padding: 12px 20px;
-      font-size: 1em;
-      border-radius: 30px;
-      border: 1px solid #ccc;
     }
 
     .categorias {
@@ -114,11 +86,20 @@
     }
 
     .flex-container {
-      background-color: rgba(213, 219, 219, 0.80);
+      background-color: rgb(213, 219, 219);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       display: flex;
-      justify-content: center;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 10px 20px;
       flex-wrap: wrap;
-      padding: 10px;
+      
+    }
+
+    .grupo-cajas {
+      display: flex;
       gap: 10px;
     }
 
@@ -128,10 +109,16 @@
       width: 235px;
       height: 37px;
       text-align: center;
-      display: flex;
+      display: flex; 
       align-items: center;
       justify-content: center;
-      
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .caja:hover {
+      transform: scale(1.05);
     }
 
     .enlace-caja {
@@ -141,33 +128,22 @@
     }
 
     .enlace-caja:hover {
-    color: rgb(28, 80, 71);
-    }
-    .boton-cerrar-sesion {
-    background-color: #4db3b3;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    font-weight: bold;
-    cursor: pointer;
-  
-}
-
-.boton-cerrar-sesion:hover {
-background-color: #3a9ea4;
-}
-
-    .imagen-inscríbete {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+      color: rgb(28, 80, 71);
     }
 
-    .imagen-inscríbete img {
-    max-width: 450px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    @media (max-width: 768px) {
+      .flex-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .grupo-cajas {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+      }
     }
 
     .parrafo-container, .beneficios-container, .testimonios-container {
@@ -184,7 +160,7 @@ background-color: #3a9ea4;
       max-width: 500px;
       padding: 20px;
       background-color: rgba(255,255,255,0.8);
-      
+      border-radius: 12px;
     }
 
     .formulario-registrar {
@@ -212,99 +188,84 @@ background-color: #3a9ea4;
     }
 
     .formulario-registrar input {
-    width: 90%;
-    padding: 12px;
-    margin-top: 6px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1em;
-    background-color: #f9f9f9;
+      width: 90%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      background-color: #f9f9f9;
     }
 
     .formulario-registrar input:focus {
-    border-color: #4db3b3;
-    outline: none;
+      border-color: #4db3b3;
+      outline: none;
     }
 
     .boton-registrarse {
-    margin-top: 25px;
+      margin-top: 25px;
     }
 
     .boton-registrarse button {
-    background-color: #4db3b3;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 25px;
-    font-weight: bold;
-    cursor: pointer;
-    color: black;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
+      background-color: #4db3b3;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 25px;
+      font-weight: bold;
+      cursor: pointer;
+      color: black;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
     }
 
     .boton-registrarse button:hover {
-    background-color: #3a9ea4;
+      background-color: #3a9ea4;
     }
 
     .titulo-seccion {
-    text-align: center;
-    font-size: 2em;
-    margin-top: 60px;
-    color: white;
-    position: relative;
-}
+      text-align: center;
+      font-size: 2em;
+      margin-top: 60px;
+      color: white;
+      position: relative;
+    }
 
     .titulo-seccion::after {
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #4db3b3;
-    margin: 12px auto 0;
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #4db3b3;
+      margin: 12px auto 0;
+      content: "";
+    }
 
-}
-    .beneficios-container,
-    .testimonios-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.beneficio,
-.testimonio {
-  background-color: #ffffffcc;
-  padding: 25px;
-  max-width: 350px;
-  flex: 1 1 280px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+    .beneficio, .testimonio {
+      background-color: #ffffff;
+      padding: 25px;
+      max-width: 350px;
+      flex: 1 1 280px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
+    .beneficio h4, .testimonio h4 {
+      font-size: 1.0em;
+      color: black;
+      margin-bottom: 10px;
+    }
 
-.beneficio h4,
-.testimonio h4 {
-  font-size: 1.0em;
-  color: black;
-  margin-bottom: 10px;
-}
-
-
-.beneficio p,
-.testimonio p {
-  font-size: 1em;
-  color: #333;
-  line-height: 1.5;
-}
-    
+    .beneficio p, .testimonio p {
+      font-size: 1em;
+      color: #333;
+      line-height: 1.5;
+    }
 
     .banner {
-    background-color: rgb(28, 80, 71);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-    margin-top: 40px;
+      background-color: rgb(28, 80, 71);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 40px;
     }
 
     .boton-cta {
@@ -324,63 +285,34 @@ background-color: #3a9ea4;
     }
 
     .titulo-parrafo {
-    font-size: 1.2em;
-    color: rgb(28, 80, 71);
-    font-weight: bold;
-    margin-bottom: 10px;
+      font-size: 1.2em;
+      color: rgb(28, 80, 71);
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-    </style>
-
-
+  </style>
 </head>
-<body>
-    <header class="logo-header">
-    <a href="landing.html" class="logo-enlace">EduLend</a>
-    </header>
 
-    <section class= "flex-container" > 
-    <div class= "caja">
-    <a href="https://www.instagram.com/?flo=true" class="enlace-caja" >Inscribirse</a></div>
-    <div class= "caja">
-    <a href="https://www.instagram.com/?flo=true" class="enlace-caja" >Iniciar sesión</a></div>
-    <div class= "caja" >
-    <a href="https://www.instagram.com/?flo=true"class="enlace-caja">Elementos disponibles</a></div>
-    <div>
-            <button class="boton-cerrar-sesion">Cerrar sesión</button>
+<body>
+  <section class="flex-container"> 
+    <a href="landing.html" class="logo-enlace">EduLend</a>
+    <div class="grupo-cajas">
+      <div class="caja"><a href="https://www.instagram.com/?flo=true" class="enlace-caja">Inscribirse</a></div>
+      <div class="caja"><a href="https://www.instagram.com/?flo=true" class="enlace-caja">Iniciar sesión</a></div>
+      <div class="caja"><a href="https://www.instagram.com/?flo=true" class="enlace-caja">Elementos disponibles</a></div>
     </div>
-    </section>
+  </section>
 
   <div class="overlay">
     <div class="encabezado">
-      <h1>EduLend</h1>
       <h2>¡Un espacio para aprender, crecer y compartir conocimiento!</h2>
 
-      <div class="busqueda">
-        <input class="busqueda-input" type="text" placeholder="¿Qué estás buscando?">
-      </div>
-
       <div class="categorias">
-        <div class="categoria">
-          <div class="categoria-icono">💻 📚</div>
-          <p>Solicitar préstamo</p>
-        </div>
-        <div class="categoria">
-          <div class="categoria-icono">📋</div>
-          <p>Consultar disponibilidad</p>
-        </div>
-        <div class="categoria">
-          <div class="categoria-icono">📅</div>
-          <p>Fecha de entrega</p>
-        </div>
-        <div class="categoria">
-          <div class="categoria-icono">📜</div>
-          <p>Historial de usuario</p>
-        </div>
+        <div class="categoria"><div class="categoria-icono">💻 📚</div><p>Solicitar préstamo</p></div>
+        <div class="categoria"><div class="categoria-icono">📋</div><p>Consultar disponibilidad</p></div>
+        <div class="categoria"><div class="categoria-icono">📅</div><p>Fecha de entrega</p></div>
+        <div class="categoria"><div class="categoria-icono">📜</div><p>Historial de usuario</p></div>
       </div>
-    </div>
-
-    <div class="imagen-inscríbete">
-      <img src="imagenes/laptop.jpg" alt="computador y libros" />
     </div>
 
     <div class="parrafo-container">
@@ -391,37 +323,38 @@ background-color: #3a9ea4;
         <p><span class="titulo-parrafo">Objetivo:</span><br>Desarrollar e implementar en la Universidad CESDE un sistema integral para la gestión de préstamos de computadores y material bibliográfico, con el fin de optimizar el acceso, uso y control de los recursos académicos.</p>
       </div>
     </div>
+
     <div class="formulario-registrar" id="formulario">
-        <h3>Inscríbete</h3>
-        <form action="">
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-    
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Correo" required>
-    
-            <label for="programa">Programa académico:</label>
-            <input type="text" id="programa" name="programa" placeholder="Tu programa" required>
-            <div class="boton-registrarse">
-                <button type="submit">Registrarse</button>
-              </div>
-              </form>
-    </div>
+      <h3>Inscríbete</h3>
+      <form action="">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Correo" required>
+
+        <label for="programa">Programa académico:</label>
+        <input type="text" id="programa" name="programa" placeholder="Tu programa" required>
+
+        <div class="boton-registrarse">
+          <button type="submit">Registrarse</button>
+        </div>
+      </form>
     </div>
 
     <div class="titulo-seccion">Beneficios</div>
     <div class="beneficios-container">
       <div class="beneficio">
         <h4>Acceso Rápido y Eficiente a Recursos Académicos</h4>
-        <p>EduLend permite a estudiantes y personal académico acceder de manera ágil y sencilla a computadores y libros educativos. Con este sistema, se optimiza el tiempo de uso y se evita el desorden administrativo, garantizando que todos los usuarios tengan lo que necesitan de manera eficiente.</p>
+        <p>EduLend permite a estudiantes y personal académico acceder de manera ágil y sencilla a computadores y libros educativos...</p>
       </div>
       <div class="beneficio">
-        <h4>Mejora en la Gestion y Control de préstamos</h4>
-        <p>La plataforma facilita el seguimiento de préstamos y devoluciones de materiales educativos, asegurando un control completo sobre los recursos. Esto reduce las pérdidas y mejora la disponibilidad de materiales, lo que beneficia tanto a los estudiantes como a la institución.</p>
+        <h4>Mejora en la Gestión y Control de Préstamos</h4>
+        <p>La plataforma facilita el seguimiento de préstamos y devoluciones de materiales educativos...</p>
       </div>
       <div class="beneficio">
         <h4>Fomento de la Responsabilidad y el Aprendizaje Colaborativo</h4>
-        <p>EduLend fomenta un ambiente de aprendizaje responsable y colaborativo. Al permitir un acceso organizado a recursos educativos, se promueve el uso compartido de materiales y la cooperación entre estudiantes, enriqueciendo la experiencia educativa.</p>
+        <p>EduLend fomenta un ambiente de aprendizaje responsable y colaborativo...</p>
       </div>
     </div>
 
@@ -429,15 +362,15 @@ background-color: #3a9ea4;
     <div class="testimonios-container">
       <div class="testimonio">
         <h4>María González - Estudiante</h4>
-        <p>"EduLend ha sido una herramienta clave en mi vida universitaria. Acceder a libros y equipos nunca había sido tan fácil. Me encanta su rapidez y organización."</p>
+        <p>"EduLend ha sido una herramienta clave en mi vida universitaria..."</p>
       </div>
       <div class="testimonio">
         <h4>Luis Molina - Coordinador Académico</h4>
-        <p>"Gracias a EduLend hemos logrado optimizar la entrega y control de los recursos institucionales. Es una solución muy efectiva y fácil de implementar."</p>
+        <p>"Gracias a EduLend hemos logrado optimizar la entrega y control de los recursos..."</p>
       </div>
       <div class="testimonio">
         <h4>Dulce Mejía - Docente</h4>
-        <p>"Lo que más valoro de EduLend es su sencillez. Mis estudiantes pueden acceder a lo que necesitan sin complicaciones, y eso mejora su experiencia académica."</p>
+        <p>"Lo que más valoro de EduLend es su sencillez..."</p>
       </div>
     </div>
 
@@ -445,8 +378,6 @@ background-color: #3a9ea4;
       <h2>¿Listo para optimizar el acceso a tus recursos académicos?</h2>
       <p>Únete a EduLend y descubre una forma más eficiente de estudiar, colaborar y avanzar.</p>
       <a href="#formulario" class="boton-cta">¡Visítanos ahora!</a>
-    </div>
-
     </div>
   </div>
 </body>
