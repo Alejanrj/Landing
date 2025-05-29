@@ -1,0 +1,407 @@
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+        background-color: #e6e6e6;
+    }
+
+    .overlay {
+      background-image: url(imagenes/biblioteca.jpeg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .overlay::before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+    }
+
+    .encabezado, .imagen-inscríbete, .parrafo-container, .formulario-registrar{
+      z-index: 1;
+      position: relative; 
+    }
+
+    .logo-header {
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 10px 20px;
+    }
+
+    .logo-enlace {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: rgb(28, 80, 71);
+      text-decoration: none;
+    }
+
+    .logo-enlace:hover {
+      color: #3a49ac;
+      cursor: pointer;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.6);
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
+
+    .encabezado {
+      text-align: center;
+      padding: 40px 20px 10px;
+      color: rgba(23, 51, 58, 0.993);
+    }
+
+    .encabezado h1 {
+      font-size: 5vw;
+      color: black;
+    }
+
+    .encabezado h2 {
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+        color: rgb(255 255 255);
+        margin-top: 10px;
+        font-weight: 600;
+        text-shadow: 3px 4px black;
+    }
+
+    .busqueda {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .busqueda-input {
+      width: 90%;
+      max-width: 500px;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+    }
+
+    .categorias {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .categoria {
+      background-color: white;
+      padding: 20px;
+      width: 180px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .categoria:hover {
+      transform: translateY(-5px);
+      background-color: #e1f7f9;
+      cursor: pointer;
+    }
+
+    .categoria-icono {
+      font-size: 30px;
+      margin-bottom: 5px;
+      color: rgb(28, 80, 71);
+    }
+
+    .categoria p {
+      font-weight: bold;
+      color: rgb(28, 80, 71);
+    }
+
+    .flex-container {
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000; 
+      box-shadow: 0 5px 7px -1px #000000;
+    }
+
+    .contenedor-botones{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+    }
+
+    .caja {
+      border: 1px solid gray;
+      background-color: #4db3b3;
+
+      width: 235px;
+      height: 37px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 6px;
+      
+    }
+
+    .caja:hover > .enlace-caja {
+        color: rgb(28, 80, 71);
+    }
+
+    .enlace-caja {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+    }
+
+
+    .boton-cerrar-sesion {
+    background-color: #4db3b3;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+  
+}
+
+.boton-cerrar-sesion:hover {
+background-color: #3a9ea4;
+}
+
+    .imagen-inscríbete {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    }
+
+    .imagen-inscríbete img {
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .parrafo-container, .beneficios-container, .testimonios-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .parrafo, .beneficio, .testimonio {
+      flex: 1;
+      min-width: 250px;
+      max-width: 500px;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.8);
+      
+    }
+
+    .formulario-registrar {
+      background-color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .formulario-registrar h3 {
+      font-size: 1.6em;
+      margin-bottom: 20px;
+      color: rgb(28, 80, 71);
+    }
+
+    .formulario-registrar label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+      text-align: left;
+      color: #333;
+    }
+
+    .formulario-registrar input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    }
+
+    .formulario-registrar input:focus {
+    border-color: #4db3b3;
+    outline: none;
+    }
+
+    .boton-registrarse {
+    margin-top: 25px;
+    }
+
+    .boton-registrarse button {
+    background-color: #4db3b3;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    }
+
+    .boton-registrarse button:hover {
+    background-color: #3a9ea4;
+    }
+
+    .titulo-seccion {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 60px;
+    color: #333;
+    position: relative;
+    margin-top: -1px;
+}
+
+    .titulo-seccion::after {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #4db3b3;
+    margin: 12px auto 0;
+
+}
+    .beneficios-container,
+    .testimonios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.beneficio,
+.testimonio {
+  background-color: #ffffffcc;
+  padding: 25px;
+  max-width: 350px;
+  flex: 1 1 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.beneficio h4,
+.testimonio h4 {
+  font-size: 1.0em;
+  color: black;
+  margin-bottom: 10px;
+}
+
+
+.beneficio p,
+.testimonio p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+}
+    
+
+    .banner {
+    background-color: rgb(28, 80, 71);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    }
+
+    .boton-cta {
+      background-color: #4db3b3;
+      color: #333;
+      padding: 12px 25px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .boton-cta:hover {
+      background-color: #a4dbe2;
+    }
+
+    .titulo-parrafo {
+    font-size: 1.2em;
+    color: rgb(28, 80, 71);
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+
+    /* Contenedor de la barra */
+#progress-container {
+  position: fixed;
+  top: 77px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #eee;
+  z-index: 9999;
+}
+
+/* Barra que se llena */
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #4db3b3;
+  transition: width 0.2s ease-out;
+}
+
+.elemento {
+  view-timeline-name: --animacion;
+  view-timeline-axis: block;
+  animation-timeline: --animacion;
+  animation-name: aparecer;
+  animation-range: entry 0% cover 50%;
+  animation-fill-mode: both;
+  padding-bottom: 40px;
+  overflow-x: none;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
