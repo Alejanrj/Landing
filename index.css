@@ -60,7 +60,7 @@
 
     .encabezado {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 5rem 20px 10px;
       color: rgba(23, 51, 58, 0.993);
     }
 
@@ -73,6 +73,7 @@
         font-size: clamp(1.4rem, 4vw, 2.2rem);
         color: rgb(255 255 255);
         margin-top: 10px;
+        margin-bottom: 4rem;
         font-weight: 600;
         text-shadow: 3px 4px black;
     }
@@ -101,6 +102,7 @@
       flex-wrap: wrap;
       gap: 20px;
       margin-top: 20px;
+      margin-bottom: 1rem;
     }
 
     .categoria {
@@ -203,6 +205,7 @@ background-color: #3a9ea4;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    object-fit: scale-down;
     }
 
     .parrafo-container, .beneficios-container, .testimonios-container {
@@ -404,4 +407,26 @@ background-color: #3a9ea4;
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.showcase {
+  animation: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heading{
+  0% {top: -300px;}
+  100% {top: 0px;}
+}
+
+.mostrar-parrafo{
+  animation-name: content;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes content{
+  0% {left: -1000px;}
+  100% {left: 0px;}
 }
