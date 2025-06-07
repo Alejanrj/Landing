@@ -196,11 +196,17 @@
     .parrafo-container, .beneficios-container, .testimonios-container {
       display: flex;
       justify-content: center;
+      align-items: center ;
       gap: 40px;
       padding: 40px;
       flex-wrap: wrap;
-    
+      
     }
+
+    .parrafo-container{
+      gap: 150px;
+    }
+
 
     .parrafo, .beneficio, .testimonio {
       flex: 1;
